@@ -1,7 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import newTheme from '../styles/theme';
-import "../styles/globals.css";
 import { QueryClient, QueryClientProvider } from "react-query";
+import "../styles/globals.css"
 
 const client = new QueryClient();
 

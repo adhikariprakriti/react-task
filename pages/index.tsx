@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useState } from 'react';
-import {Flex, Box, Stack,Text, Button, Spacer,Checkbox,Center,IconButton,InputLeftElement,Input,InputGroup} from '@chakra-ui/react'
+import {Flex, Box, Stack,Text, Button, Spacer,Checkbox,Center,IconButton,InputLeftElement,Input,InputGroup, Heading} from '@chakra-ui/react'
 import { SearchIcon,AddIcon} from '@chakra-ui/icons'
 import { request, gql } from "graphql-request";
 import { useQuery } from "react-query";
@@ -69,7 +69,7 @@ const handleChange=(e:any)=>{
     <Input type='text' placeholder='Search username' value={content}  onChange={handleChange}/>
   </InputGroup>
 :<IconButton aria-label='Search' bg="white" icon={<SearchIcon w={5} h={5} mr="4"/>} onClick={handleSearch}/>}
-                  <Button color="white" bg="button" ><AddIcon w={4} h={4} mr="2"/> New User</Button>
+                  <Button color="white" bg="button" fontWeight="500" fontSize="md"><AddIcon w={3} h={3} mr="2" fontWeight="500" fontSize="md" /> New User</Button>
                 </Stack>
               </Stack>
               <Flex direction="column" mb="4">
