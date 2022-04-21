@@ -1,6 +1,6 @@
 import {Checkbox,Flex,Box} from '@chakra-ui/react'
 
-type dataprops={
+interface dataprops{
    checked:boolean,
    name:string,
    phone:string,

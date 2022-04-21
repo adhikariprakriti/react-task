@@ -3,13 +3,12 @@ import {Flex} from '@chakra-ui/react'
 import TableHeader from './TableHeader'
 import TableData from './TableData'
 
-type tableDataProps={
-    searchTerm:String,
-    data:{
+interface tableDataProps{
+    searchTerm:string,
+    fetchedData:{
         users:
             {
-               data:[
-                  { id:string,
+               data:{ id:string,
                    name:string,
                    username:string,
                    address:
@@ -19,20 +18,19 @@ type tableDataProps={
                    email:string,
                    website:any,
                    phone:string,
-                  }
-                ]
+                  }[]
 
             }
     }}
 
-const Table=({searchTerm,data}:tableDataProps)=>{
+const Table=({searchTerm,fetchedData}:tableDataProps)=>{
     const[checked,setChecked]=useState(false)
     const handleCheckbox=(e:any)=>{
         setChecked(!checked)
     }
 
 
-    const result=data.users.data.filter((user)=>{
+    const result=fetchedData.users.data.filter((user)=>{
         if(searchTerm==""){
         return user
         }else if(user.username.toLowerCase().includes(searchTerm.toLowerCase())){

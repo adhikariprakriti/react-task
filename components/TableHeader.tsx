@@ -1,6 +1,6 @@
 import {Checkbox,Flex,Box} from '@chakra-ui/react'
 
-type tableHeaderProps={
+interface tableHeaderProps{
     checked:boolean,
     handleCheckbox: (event: React.ChangeEvent<HTMLInputElement>) => void,
 }
